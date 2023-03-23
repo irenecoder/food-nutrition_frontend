@@ -5,7 +5,7 @@ import { PostBlog } from "./PostBlog/PostBlog";
 import BlogPic1 from "../../../assets/blog_image_1.svg";
 import BlogPic2 from "../../../assets/bloco_image_2.svg";
 import BlogPic3 from "../../../assets/bloco_image_3.svg";
-// import BlogPic4 from "../../../assets/bloco_image_4.svg";
+import BlogPic4 from "../../../assets/bloco_image_4.svg";
 import ProfilePic from "../../../assets/profile.jpg";
 
 export const Blog = () => {
@@ -13,7 +13,7 @@ export const Blog = () => {
     <section className="blog">
       <div className="blogWrapper">
         <div className="topInfo">
-          <h2>Read Our Blog</h2>
+          <h2>Health conditions caused by poor nutrition</h2>
           <p>
             Far far away, behind the word mountains, far from the countries
             Vakalia and Consonantia, there live the blind texts
@@ -52,14 +52,14 @@ export const Blog = () => {
             author="Marllon Maia"
           />
 
-          {/* <PostBlog
+          <PostBlog
             src={BlogPic4}
             alt="alimento4"
             title="How to get stronger without Gym"
             profile={ProfilePic}
             name="Will"
             author="Atevilson Freitas"
-          /> */}
+          />
           <div className="postBtn">
             <button className="rigth">→</button>
             </div>

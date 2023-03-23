@@ -12,7 +12,7 @@ export const BestServices = () => {
                 </div>
 
                 <div className="rigthServices">
-                    <h2>The best services ready To serve you</h2>
+                    <h2>Good nutrition reduces Deficiencies</h2>
 
                     <p>Far far away, begind the word mountains, far from the countris Vakalia and Consanantia, there live the bind texts.</p>
 

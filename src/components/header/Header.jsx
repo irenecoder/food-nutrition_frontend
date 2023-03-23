@@ -39,13 +39,19 @@ export const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="/">HEALTHY RECIPES</a>
+              <a href="/">Recipes</a>
             </li>
             <li>
-              <a href="/">BLOG</a>
+              <a href="/">Deficiencies</a>
             </li>
             <li>
-              <a href="/">JOIN</a>
+              <a href="/">Conditions</a>
+            </li>
+            <li>
+              <a href="/">Foods</a>
+            </li>
+            <li>
+              <a href="/">Tools</a>
             </li>
           </ul>
           <div className="btn">
