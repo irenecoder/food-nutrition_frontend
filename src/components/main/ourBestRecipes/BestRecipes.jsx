@@ -18,7 +18,7 @@ export const BestRecipes = () => {
     const [recipe, setRecipe] = useState({})
 
     const fetchData = () => {
-        return axios.get("http://0.0.0.0:9000/apiv1/foods/")
+        return axios.get("http://0.0.0.0:9000/apiv1/recipes")
               .then((response) => {
                 const limitedFood = response.data.splice(0,4);
                 setFood(limitedFood);

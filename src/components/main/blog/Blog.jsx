@@ -52,14 +52,14 @@ export const Blog = () => {
             author="Marllon Maia"
           />
 
-          <PostBlog
+          {/* <PostBlog
             src={BlogPic4}
             alt="alimento4"
             title="How to get stronger without Gym"
             profile={ProfilePic}
             name="Will"
             author="Atevilson Freitas"
-          />
+          /> */}
           <div className="postBtn">
             <button className="rigth">→</button>
             </div>

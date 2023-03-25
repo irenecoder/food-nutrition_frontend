@@ -3,42 +3,36 @@ import "./ResponsiveHero.css";
 import React, { useState,useEffect } from "react";
 import HeroImg from "../../../assets/Illustration.svg";
 import axios from "axios";
+import SearchBar from "./SearchBar";
 
 export const Hero = () => {
 
-  
-  const [query,setQuery] = useState('');
-  const [recommendations,setRecommendations] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const[recipes,setRecipes] = useState([]);
+  const[recommendations,setRecommendations] = useState([]);
+  const[searchItem,setSearchItem]=useState('');
 
-  const [products,setProducts] = useState({});
-
-  const fetchData = () => {
-    return axios.get("https://dummyjson.com/products")
-          .then((response) => setProducts(response.data));
-  }
-
+  // fetch recipe data
   useEffect(() => {
-    fetchData();
-  },[])
+    axios.get('http://0.0.0.0:9000/apiv1/recipes')
+      .then(response => {
+        setRecipes(response.data);
+        setRecommendations(response.data.splice(0,5));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
-  const handleQueryChange = async (event) => {
-    const newQuery = event.target.value;
-    setQuery(newQuery);
+  const handleSearch = event =>{
+    const term = event.target.value.toLowerCase();
+    setSearchItem(term);
 
-    try {
-      const responseBeta = await axios.get(`https://dummyjson.com/products?q=${newQuery}`);
-      setRecommendations(responseBeta.data);
-      setShowModal(true); // Show the modal when recommendations are available
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    const recommended = recipes.filter(recipe =>
+      recipe.Food_name.toLowerCase().includes(term)
+      // recipe.Food_description.toLowerCase().includes(term)
+    );
 
-  const handleRecommendationClick = (recommendation) => {
-    // Handle user clicking on a recommendation
-    console.log(`User clicked on recommendation: ${recommendation}`);
-    setShowModal(false); // Hide the modal when a recommendation is selected
+    setRecommendations(recommended)
   };
   
   return (
@@ -46,20 +40,23 @@ export const Hero = () => {
       <div className="contentWrapper">
         <div className="leftContent">
           <h2>Ready for Trying a new recipe?</h2>
-          <div className="handle">
-            <input type="text" value={query} onChange={handleQueryChange} placeholder="Search healthy recipes" />
+
+          <SearchBar />
+          {/* <div className="handle">
+            <input type="text" value={searchItem} onChange={handleSearch} placeholder="Search healthy recipes" />
 
             {recommendations.length > 0 && (
           <ul>
-          {recommendations.map((recommendation) => (
-            <li key={recommendation.id} onClick={() => handleRecommendationClick(recommendation)}>
-              {recommendation.title}
+          {recommendations.map((recipe) => (
+            
+            <li key={recipe._id}>
+              {recipe.Food_name}
             </li>
           ))}
         </ul>
       )}
             <button type="text">🔎</button>
-          </div>
+          </div> */}
         </div>
 
         <div className="rigthContent">
