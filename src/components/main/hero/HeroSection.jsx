@@ -42,21 +42,6 @@ export const Hero = () => {
           <h2>Ready for Trying a new recipe?</h2>
 
           <SearchBar />
-          {/* <div className="handle">
-            <input type="text" value={searchItem} onChange={handleSearch} placeholder="Search healthy recipes" />
-
-            {recommendations.length > 0 && (
-          <ul>
-          {recommendations.map((recipe) => (
-            
-            <li key={recipe._id}>
-              {recipe.Food_name}
-            </li>
-          ))}
-        </ul>
-      )}
-            <button type="text">🔎</button>
-          </div> */}
         </div>
 
         <div className="rigthContent">
