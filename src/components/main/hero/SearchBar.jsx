@@ -3,6 +3,7 @@ import './styles.css';
 import axios from 'axios';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
+import {Link} from 'react-router-dom'
 
 const SearchBar = () => {
 
@@ -53,8 +54,10 @@ const SearchBar = () => {
         <div className="dataResult">
         {recommendations.slice(0,15).map((recipe)=>{
             return (
-            <div>
-                <a className="dataItem" href='#' target="_blank"><p>{recipe.Food_name}</p></a>
+            <div key={recipe._id}>
+            
+                <a className="dataItem" href={`/recipes/${recipe._id}`} target="_blank"><p>{recipe.Food_name}</p></a>
+                {/* <Link to={`/recipes/${recipe._id}`}>{recipe.Food_name}</Link> */}
              </div>
 
         )})}
