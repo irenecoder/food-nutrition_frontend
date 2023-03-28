@@ -1,6 +1,6 @@
 import './PostRecipe.css'
 import './ResponsiveCardRecipe.css'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export const RecipePost = (props) => {
 
