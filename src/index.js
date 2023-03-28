@@ -6,6 +6,7 @@ import Container from './Container';
 
 import Root from './pages/Root';
 import Recipe from './pages/Recipe';
+import Home from './pages/Home';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
         path: "/recipes/:_id",
         element: <Recipe />,
         // loader: teamLoader,
+      },
+      {
+        path: "",
+        element: <Home />,
+
       },
     ],
   },

@@ -2,6 +2,7 @@ import "./header.css";
 import "./ResponsiveHeader.css";
 import Modal from "react-modal";
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 const customStyles = {
   content: {
@@ -34,7 +35,7 @@ export const Header = () => {
     <header>
       <div className="wraper">
         <div className="logo">
-          <h1>Healthy Food</h1>
+          <Link to={""}><h1>Healthy Food</h1></Link>
         </div>
         <nav>
           <ul>

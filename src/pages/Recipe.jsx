@@ -6,9 +6,10 @@ import './pages.css'
 
 const Recipe = () => {
 
+  const[recipe,setRecipe] = useState([]); 
+
   const { _id } = useParams()
 
-    const[recipe,setRecipe] = useState([]); 
     // fetch recipe data
   useEffect(() => {
     axios.get(`http://0.0.0.0:9000/apiv1/recipes/${_id}`)
@@ -33,7 +34,7 @@ const Recipe = () => {
                 </div>
 
                 <div className="rigthServices">
-                    <h2>hello{recipe.Food_name}</h2>
+                    <h2>{recipe.Food_name}</h2>
 
                     <p>{recipe.Dish_group_description}</p>
 
