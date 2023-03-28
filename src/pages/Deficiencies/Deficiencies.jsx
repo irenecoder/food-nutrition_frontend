@@ -1,9 +1,26 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { PostBlog } from "./PostBlog/PostBlog";
 import ProfilePic from '../../assets/profile.jpg'
 import './Deficiencies.css'
 
+import axios from 'axios';
+
 const Deficiencies = () => {
+
+    const[deficiencies,setDeficiencies] = useState([]);
+
+    // fetch deficiencies data
+  useEffect(() => {
+    axios.get('http://0.0.0.0:9000/apiv1/deficiencies')
+      .then(response => {
+        setDeficiencies(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
+
   return (
     <section className="blog">
       <div className="blogWrapper">
@@ -19,42 +36,25 @@ const Deficiencies = () => {
             <div className="postBtn">
             {/* <button className="left">←</button> */}
             </div>
-            
-          <PostBlog
+
+           {deficiencies.length >0 &&(
+            deficiencies.map((deficiency)=>{
+            return(
+                <PostBlog
             // src={BlogPic1}
-            alt="alimento1"
-            title="Quick-start guide to nuts and seeds"
+            key = {deficiency._id}
+            // alt="alimento1"
+            title={deficiency.Deficiency_disease}
+            signs= {deficiency.Sign_and_symptoms}
+            lacking={deficiency.Nutrients}
             profile={ProfilePic}
             name="fabio"
             author="Fabio de Andrade"
           />
+            )       
+            }) )} 
+          
 
-          <PostBlog
-            // src={BlogPic2}
-            alt="alimento2"
-            title="The top 10 benefits of eating healthy"
-            profile={ProfilePic}
-            name="Rapha Gama"
-            author="Raphael Gama"
-          />
-
-          <PostBlog
-            // src={BlogPic3}
-            alt="alimento3"
-            title="Nutrition: Tips for improving Your health"
-            profile={ProfilePic}
-            name="MM"
-            author="Marllon Maia"
-          />
-
-          {/* <PostBlog
-            src={BlogPic4}
-            alt="alimento4"
-            title="How to get stronger without Gym"
-            profile={ProfilePic}
-            name="Will"
-            author="Atevilson Freitas"
-          /> */}
           <div className="postBtn">
             {/* <button className="rigth">→</button> */}
             </div>

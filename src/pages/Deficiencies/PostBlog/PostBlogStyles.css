@@ -1,18 +1,30 @@
 .PostBlog {
     display: flex;
-    flex-flow: column wrap;
+    /* flex-flow: column wrap; */
     width: 20rem;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.466);
-    margin: 0 1.5rem;
+    margin: 10 1.5rem;
     transition: all 0.3s;
     
 }
 
-.PostBlog:hover {
-    transform: scale(1.05)
+.topBlog{
+    margin:10px;
+    color: rgb(3, 3, 82);
+    line-height: 2rem;
+    width: 85%;
+
 }
+
+.topBlog p{
+    color: darkgrey;
+}
+
+/* .PostBlog:hover { */
+    /* transform: scale(1.05) */
+/* } */
 
 .middleBlog {
     display: flex;
