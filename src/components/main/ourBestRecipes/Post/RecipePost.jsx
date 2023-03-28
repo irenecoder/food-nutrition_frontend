@@ -1,7 +1,10 @@
 import './PostRecipe.css'
 import './ResponsiveCardRecipe.css'
+import {Link} from 'react-router-dom'
 
 export const RecipePost = (props) => {
+
+
     return (
        <div className="postWrapper">
            <div className="leftInfo">
