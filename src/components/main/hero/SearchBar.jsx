@@ -56,8 +56,10 @@ const SearchBar = () => {
             return (
             <div key={recipe._id}>
             
-                <a className="dataItem" href={`/recipes/${recipe._id}`} target="_blank"><p>{recipe.Food_name}</p></a>
-                {/* <Link to={`/recipes/${recipe._id}`}>{recipe.Food_name}</Link> */}
+                {/* <a className="dataItem" href={`/recipes/${recipe._id}`} target="_blank"><p>{recipe.Food_name}</p></a> */}
+                <Link to={`/recipes/${recipe._id}`}>
+                <p className="dataItem">{recipe.Food_name}</p>
+                </Link>
              </div>
 
         )})}

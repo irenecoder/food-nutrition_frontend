@@ -137,6 +137,7 @@ input:focus{
     display:flex;
     align-items: center;
     color: black;
+    margin-left: 10px;
 }
 
 .dataItem p{
