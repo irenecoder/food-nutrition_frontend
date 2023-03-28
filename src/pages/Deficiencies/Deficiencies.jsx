@@ -1,4 +1,6 @@
 import React from 'react'
+import { PostBlog } from "../../components/main/blog/PostBlog/PostBlog";
+import ProfilePic from '../../assets/profile.jpg'
 import './Deficiencies.css'
 
 const Deficiencies = () => {
@@ -6,7 +8,7 @@ const Deficiencies = () => {
     <section className="blog">
       <div className="blogWrapper">
         <div className="topInfo">
-          <h2>Health conditions caused by poor nutrition</h2>
+          <h2>Health deficiencies caused by poor nutrition</h2>
           <p>
             Far far away, behind the word mountains, far from the countries
             Vakalia and Consonantia, there live the blind texts
@@ -19,7 +21,7 @@ const Deficiencies = () => {
             </div>
             
           <PostBlog
-            src={BlogPic1}
+            // src={BlogPic1}
             alt="alimento1"
             title="Quick-start guide to nuts and seeds"
             profile={ProfilePic}
@@ -28,7 +30,7 @@ const Deficiencies = () => {
           />
 
           <PostBlog
-            src={BlogPic2}
+            // src={BlogPic2}
             alt="alimento2"
             title="The top 10 benefits of eating healthy"
             profile={ProfilePic}
@@ -37,7 +39,7 @@ const Deficiencies = () => {
           />
 
           <PostBlog
-            src={BlogPic3}
+            // src={BlogPic3}
             alt="alimento3"
             title="Nutrition: Tips for improving Your health"
             profile={ProfilePic}
