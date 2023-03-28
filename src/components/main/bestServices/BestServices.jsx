@@ -1,6 +1,7 @@
 import './Styles.css'
 import './ResponsiveService.css'
 import ServPic from '../../../assets/bloco_services.svg'
+import {Link} from 'react-router-dom'
 
 export const BestServices = () => {
     return (
@@ -20,7 +21,7 @@ export const BestServices = () => {
 
                     <p>A small rier named Duden flow by their place and supplies it with the necessary regelialia.</p>
 
-                    <button>Know More</button>
+                    <Link to={'/deficiencies'}><button>Know More</button></Link>
 
 
                 </div>

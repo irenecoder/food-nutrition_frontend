@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostBlog } from "../../components/main/blog/PostBlog/PostBlog";
+import { PostBlog } from "./PostBlog/PostBlog";
 import ProfilePic from '../../assets/profile.jpg'
 import './Deficiencies.css'
 
@@ -10,14 +10,14 @@ const Deficiencies = () => {
         <div className="topInfo">
           <h2>Health deficiencies caused by poor nutrition</h2>
           <p>
-            Far far away, behind the word mountains, far from the countries
+            Far  away, behind the word mountains, far from the countries
             Vakalia and Consonantia, there live the blind texts
           </p>
         </div>
 
         <div className="postsWrapper">
             <div className="postBtn">
-            <button className="left">←</button>
+            {/* <button className="left">←</button> */}
             </div>
             
           <PostBlog
@@ -56,7 +56,7 @@ const Deficiencies = () => {
             author="Atevilson Freitas"
           /> */}
           <div className="postBtn">
-            <button className="rigth">→</button>
+            {/* <button className="rigth">→</button> */}
             </div>
         </div>
       </div>
