@@ -15,9 +15,10 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: transparent;
+    background-color: rgb(233, 213, 38);
+    /* background: transparent; */
     color: black;
-    border-color:#92d362;
+    border-color:#191a19;
     /* color: #eee;
     border-color: #eee; */
 }

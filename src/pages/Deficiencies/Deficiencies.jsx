@@ -10,7 +10,7 @@ const Deficiencies = () => {
     const[deficiencies,setDeficiencies] = useState([]);
 
     const [currentPage,setCurrentPage] = useState(1);
-    const [postPerPage,setPostPerPage] = useState(2);
+    const [postPerPage,setPostPerPage] = useState(3);
 
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
@@ -41,10 +41,7 @@ const Deficiencies = () => {
         </div>
 
         <div className="postsWrapper">
-            <div className="postBtn">
-            {/* <button className="left">←</button> */}
-            </div>
-
+            
            {currentDeficiencies.length >0 &&(
             currentDeficiencies.map((deficiency)=>{
             return(

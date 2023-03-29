@@ -16,7 +16,6 @@ const Pagination = ({totalPosts,postPerPage,setCurrentPage,currentPage}) => {
         onClick={()=>setCurrentPage(page)}>{page}</button>
    }) 
     }  
-    <h2>Pagination</h2>
          
     </div>
   )
