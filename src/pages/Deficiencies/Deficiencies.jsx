@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { PostBlog } from "./PostBlog/PostBlog";
 import ProfilePic from '../../assets/profile.jpg'
 import './Deficiencies.css'
-
+import Pagination from './Pagination/Pagination';
 import axios from 'axios';
 
 const Deficiencies = () => {
@@ -10,10 +10,10 @@ const Deficiencies = () => {
     const[deficiencies,setDeficiencies] = useState([]);
 
     const [currentPage,setCurrentPage] = useState(1);
-    const [postsPerPage,setPostsPerPage] = useState(6);
+    const [postPerPage,setPostPerPage] = useState(2);
 
-    const lastPostIndex = currentPage * postsPerPage;
-    const firstPostIndex = lastPostIndex - postsPerPage;
+    const lastPostIndex = currentPage * postPerPage;
+    const firstPostIndex = lastPostIndex - postPerPage;
 
     const currentDeficiencies = deficiencies.slice(firstPostIndex,lastPostIndex);
 
@@ -45,8 +45,8 @@ const Deficiencies = () => {
             {/* <button className="left">←</button> */}
             </div>
 
-           {deficiencies.length >0 &&(
-            deficiencies.map((deficiency)=>{
+           {currentDeficiencies.length >0 &&(
+            currentDeficiencies.map((deficiency)=>{
             return(
                 <PostBlog
             // src={BlogPic1}
@@ -61,6 +61,13 @@ const Deficiencies = () => {
           />
             )       
             }) )} 
+
+        <Pagination 
+            totalPosts = {deficiencies.length}
+            postPerPage = {postPerPage}
+            setCurrentPage = {setCurrentPage}
+            currentPage = {setCurrentPage}
+        />
           
 
           <div className="postBtn">
