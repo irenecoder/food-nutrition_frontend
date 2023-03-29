@@ -16,8 +16,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
     background: transparent;
-    color: #eee;
-    border-color: #eee;
+    color: black;
+    border-color:#92d362;
+    /* color: #eee;
+    border-color: #eee; */
 }
 
 .pagination button.active {

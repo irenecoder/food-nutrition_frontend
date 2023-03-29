@@ -66,7 +66,7 @@ const Deficiencies = () => {
             totalPosts = {deficiencies.length}
             postPerPage = {postPerPage}
             setCurrentPage = {setCurrentPage}
-            currentPage = {setCurrentPage}
+            currentPage = {currentPage}
         />
           
 
