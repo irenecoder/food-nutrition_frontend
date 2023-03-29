@@ -9,6 +9,14 @@ const Deficiencies = () => {
 
     const[deficiencies,setDeficiencies] = useState([]);
 
+    const [currentPage,setCurrentPage] = useState(1);
+    const [postsPerPage,setPostsPerPage] = useState(6);
+
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+
+    const currentDeficiencies = deficiencies.slice(firstPostIndex,lastPostIndex);
+
     // fetch deficiencies data
   useEffect(() => {
     axios.get('http://0.0.0.0:9000/apiv1/deficiencies')
