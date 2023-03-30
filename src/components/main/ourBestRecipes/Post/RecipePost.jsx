@@ -6,7 +6,7 @@ export const RecipePost = (props) => {
 
 
     return (
-       <div className="postWrapper">
+       <div className="posterWrapper">
            <div className="leftInfo">
                <img src={props.src} alt={props.alt}/>
 

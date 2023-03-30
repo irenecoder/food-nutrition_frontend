@@ -40,7 +40,7 @@ const Deficiencies = () => {
           </p>
         </div>
 
-        <div className="postsWrapper">
+        <div className="postWrapper">
             
            {currentDeficiencies.length >0 &&(
             currentDeficiencies.map((deficiency)=>{
