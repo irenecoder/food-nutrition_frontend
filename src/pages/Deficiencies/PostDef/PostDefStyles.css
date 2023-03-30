@@ -63,6 +63,14 @@
     height: 4rem;
 }
 
+.botBlog button{
+    background-color: #92d362;
+    color: white;
+    width: 7rem;
+    align-items: center;
+    margin-left:100px;
+}
+
 .botProfile p {
     margin: 1rem;
     color: rgba(0, 0, 0, 0.37);

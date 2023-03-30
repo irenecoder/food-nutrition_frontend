@@ -14,10 +14,11 @@ export const PostDef = (props) => {
                 <h2>{props.title}</h2>
             </div> */}
             <div className="botBlog">
-                <div className="botProfile">
+                <button>Related recipes</button>
+                {/* <div className="botProfile">
                 <img src={props.profile} alt={props.name} />
                 <p>{props.author}</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )
