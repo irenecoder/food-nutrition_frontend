@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect';
-import { PostBlog } from './PostBlog';
+import { PostDef } from './PostDef.test';
 
 describe('Testing Blog Post Card component', () => {
     it('should show a imagem in the top of card', () => {
-        render(<PostBlog
+        render(<PostDef
             src='teste-top'
             alt='teste-topImg'
             title='teste'
@@ -21,7 +21,7 @@ describe('Testing Blog Post Card component', () => {
     });     
 
     it('should show a heading in the midle of card', () => {
-        render(<PostBlog
+        render(<PostDef
             src='teste-top'
             alt='teste-topImg'
             title='teste'
@@ -38,7 +38,7 @@ describe('Testing Blog Post Card component', () => {
     });    
 
     it('should show a infor part of card', () => {
-        render(<PostBlog
+        render(<PostDef
             src='teste-top'
             alt='teste-topImg'
             title='teste'

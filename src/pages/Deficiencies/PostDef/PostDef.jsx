@@ -1,7 +1,7 @@
-import './PostBlogStyles.css'
+import './PostDefStyles.css'
 import './ResponsiveBlogCard.css'
 
-export const PostBlog = (props) => {
+export const PostDef = (props) => {
     return (
         <div className="PostBlog">
             <div className="topBlog">

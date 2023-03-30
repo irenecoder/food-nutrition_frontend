@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { PostBlog } from "./PostBlog/PostBlog";
+import { PostDef } from "./PostDef/PostDef";
 import ProfilePic from '../../assets/profile.jpg'
 import './Deficiencies.css'
 import Pagination from './Pagination/Pagination';
@@ -45,7 +45,7 @@ const Deficiencies = () => {
            {currentDeficiencies.length >0 &&(
             currentDeficiencies.map((deficiency)=>{
             return(
-                <PostBlog
+                <PostDef
             // src={BlogPic1}
             key = {deficiency._id}
             // alt="alimento1"
