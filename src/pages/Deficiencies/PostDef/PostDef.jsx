@@ -1,5 +1,6 @@
 import './PostDefStyles.css'
 import './ResponsiveBlogCard.css'
+import {Link} from 'react-router-dom'
 
 export const PostDef = (props) => {
     return (
@@ -14,7 +15,7 @@ export const PostDef = (props) => {
                 <h2>{props.title}</h2>
             </div> */}
             <div className="botBlog">
-                <button>Related recipes</button>
+                <Link to={'/deficiencies/recipes'}><button>Related recipes</button></Link>
                 {/* <div className="botProfile">
                 <img src={props.profile} alt={props.name} />
                 <p>{props.author}</p>

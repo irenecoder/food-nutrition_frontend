@@ -12,6 +12,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Deficiencies from './pages/Deficiencies/Deficiencies';
+import DeficiencyRecipes from './pages/DeficiencyRecipes/DeficiencyRecipes';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/deficiencies",
         element: <Deficiencies />,
+      },
+      {
+        path: "/deficiencies/recipes",
+        element: <DeficiencyRecipes />,
       },
     ],
   },
