@@ -111,14 +111,14 @@ const DeficiencyRecipes = () => {
                             
                 }
               break;
-                  case '63ffdc60c5a101405f400d7f':
-                    // Check if the object has the key whose value you want to change
-                    if (deficiency.Nutrients) {
-                      // Change the value of the key
-                      deficiency.Nutrients = 'Na_in_mg';
+            case '63ffdc60c5a101405f400d7d':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Mg_in_mg';
                               
-                      }
-                    break;
+                }
+              break;
                     case '63ffdc60c5a101405f400d7f':
                       // Check if the object has the key whose value you want to change
                       if (deficiency.Nutrients) {
