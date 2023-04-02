@@ -10,40 +10,114 @@ const DeficiencyRecipes = () => {
  // fetch deficiencies data
  useEffect(() => {
     axios.get('http://0.0.0.0:9000/apiv1/deficiencies')
-      // .then(response => response.json())
+      // .then(response => response.json())  --> Not required in axios
       .then(response =>{
-        const data = response.data
-        // Find the object with the ID you want to modify
-        const renamedNutrient= response.data.find(deficiency => deficiency._id === '63ffdc60c5a101405f400d70');
-        if (renamedNutrient) {
-          renamedNutrient.Nutrients = 'Vit_B12_in_mcg';
-        }
-        setDeficiencies(data);
-        // Rename the value in the deficiency Nutrient
-        // const renamedNutrient = response.data.map((deficiency)=>{
-        //     return{
-        //         Nutrients:deficiency.Nutrients,
-        //         "Vit_B12_in_mcg":deficiency["Vitamin B12 (cyanocobalamine)"]
-        //     }
-        // })
-        // setDeficiencies(renamedNutrient)
+        // Loop through each object in the array
+        response.data.forEach(deficiency=>{
+          switch(deficiency._id){
+            case '63ffdc60c5a101405f400d71':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Vit_C_in_mcg';
+              
+            }
+              break;
+            case '63ffdc60c5a101405f400d73':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Food_folate_in_mcg';
+              
+            }
+              break;
+            case '63ffdc60c5a101405f400d74':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Thiamin_in_mcg';
+              
+            }
+              break;
+            case '63ffdc60c5a101405f400d79':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Beta_carotene_equivalent_in_mcg';
+                
+              }
+              break;
+            case '63ffdc60c5a101405f400d7a':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Ca_in_mg';
+                  
+                }
+              break;
+            case '63ffdc60c5a101405f400d7c':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Fe_in_mg';
+                    
+                }
+              break;
+            case '63ffdc60c5a101405f400d7e':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Zn_in_mg';
+                      
+                }
+              break;
+            case '63ffdc60c5a101405f400d7f':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Na_in_mg';
+                        
+                }
+              break;
+            case '63ffdc60c5a101405f400d81':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Water_in_g';
+                          
+                }
+              break;
+            case '63ffdc60c5a101405f400d7a':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Ca_in_mg';
+                            
+                }
+              break;
+            default:
+              break;
+          }
+        })
+        setDeficiencies(response.data);
+        
+        
       })
-    //   console.log(renamedNutrient)
       .catch(error => {
         console.log(error);
       });
   }, []);
   
   // fetch recipes data
-  // useEffect(() => {
-  //   axios.get('http://0.0.0.0:9000/apiv1/recipes')
-  //     .then(response => {
-  //       setRecipes(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios.get('http://0.0.0.0:9000/apiv1/recipes')
+      .then(response => {
+        setRecipes(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div>
@@ -54,7 +128,6 @@ const DeficiencyRecipes = () => {
       ))}
     
     </div>
-
   )
 }
 
