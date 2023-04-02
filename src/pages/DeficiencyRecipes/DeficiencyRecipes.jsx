@@ -95,6 +95,54 @@ const DeficiencyRecipes = () => {
                             
                 }
               break;
+            case '63ffdc60c5a101405f400d75':
+              // Check if the object has the key whose value you want to change
+              if (deficiency.Nutrients) {
+                // Change the value of the key
+                deficiency.Nutrients = 'Niacin_in_mcg';
+                          
+                }
+              break;
+                case '63ffdc60c5a101405f400d7f':
+                  // Check if the object has the key whose value you want to change
+                  if (deficiency.Nutrients) {
+                    // Change the value of the key
+                    deficiency.Nutrients = 'Na_in_mg';
+                            
+                    }
+                  break;
+                  case '63ffdc60c5a101405f400d7f':
+                    // Check if the object has the key whose value you want to change
+                    if (deficiency.Nutrients) {
+                      // Change the value of the key
+                      deficiency.Nutrients = 'Na_in_mg';
+                              
+                      }
+                    break;
+                    case '63ffdc60c5a101405f400d7f':
+                      // Check if the object has the key whose value you want to change
+                      if (deficiency.Nutrients) {
+                        // Change the value of the key
+                        deficiency.Nutrients = 'Na_in_mg';
+                                
+                        }
+                      break;
+                      case '63ffdc60c5a101405f400d7f':
+                        // Check if the object has the key whose value you want to change
+                        if (deficiency.Nutrients) {
+                          // Change the value of the key
+                          deficiency.Nutrients = 'Na_in_mg';
+                                  
+                          }
+                        break;
+                        case '63ffdc60c5a101405f400d7f':
+                          // Check if the object has the key whose value you want to change
+                          if (deficiency.Nutrients) {
+                            // Change the value of the key
+                            deficiency.Nutrients = 'Na_in_mg';
+                                    
+                            }
+                          break;
             default:
               break;
           }
